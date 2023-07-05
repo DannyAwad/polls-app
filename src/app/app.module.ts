@@ -3,21 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NgbCarouselModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NavComponent } from './components/nav/nav.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { NotFoundComponent } from './components/not-found/not-found.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavComponent,
-    FooterComponent,
-    NotFoundComponent,
-  ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, NgbCarouselModule],
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, SharedModule],
   providers: [],
-  exports: [NotFoundComponent],
+  exports: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
